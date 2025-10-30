@@ -5,6 +5,8 @@
 ## API
 
 ```js
+import { UserManager } from "https://code4fukui.github.io/UserManager/UserManager.js";
+
 const um = await UserManager.create();
 ```
 
