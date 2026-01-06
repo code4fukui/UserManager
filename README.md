@@ -1,6 +1,6 @@
 # UserManager
 
-ファイルベースのユーザー管理
+ファイルベースのユーザー管理 with [PubkeyUser](https://github.com/code4fukui/PubkeyUser)
 
 ## API
 
