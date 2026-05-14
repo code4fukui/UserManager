@@ -1,6 +1,8 @@
 # UserManager
 
-ファイルベースのユーザー管理 with [PubkeyUser](https://github.com/code4fukui/PubkeyUser)
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+File-based user management with [PubkeyUser](https://github.com/code4fukui/PubkeyUser).
 
 ## API
 
@@ -10,29 +12,27 @@ import { UserManager } from "https://code4fukui.github.io/UserManager/UserManage
 const um = await UserManager.create();
 ```
 
-- async isAllowed(pubkey)
-許可チェック
+- `async isAllowed(pubkey)`
+  Check if a user is allowed.
+- `async add(pubkey, name, secret)`
+  Add a new user.
+- `async getRequestUsers()`
+  Get a list of users waiting for approval.
+- `async getAllowedUsers()`
+  Get a list of approved users.
+- `async allow(pubkey)`
+  Approve a user.
+- `async reject(pubkey)`
+  Reject a user.
+- `async remove(pubkey)`
+  Remove an approved user.
 
-- async add(pubkey, name, secret)
-ユーザー追加
-
-- async getRequestUsers()
-許可待ちユーザー取得
-
-- async getAllowedUsers()
-許可済みユーザー取得
-
-- async allow(pubkey)
-許可
-
-- async reject(pubkey)
-拒否
-
-- async remove(pubkey)
-許可済みユーザーの削除
-
-## test
+## Testing
 
 ```sh
 deno test --allow-read=./data/ --allow-write=./data/ --allow-import
 ```
+
+## License
+
+MIT License
